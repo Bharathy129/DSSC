@@ -1,0 +1,2900 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10200.17.0216.1925                               -->
+<workbook source-build='10.2.0 (10200.17.0216.1925)' source-platform='win' version='10.2' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (public_spending)' inline='true' name='federated.0cwnh6o05hek851buy9ww1rztvho' version='10.2'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='public_spending' name='excel-direct.17wgvz10rumlrl14apyly1gva90d'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Christos/Desktop/UCL/Νέος φάκελος/public_spending.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.17wgvz10rumlrl14apyly1gva90d' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C11:no:A1:C11:0' header='yes' outcome='2'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='date' date-parse-format='yyyy|#|#|yyMM|#|#|ddMM|#|#|HHmm|#|#|mmss' name='Year' ordinal='1' />
+            <column datatype='real' name='spending' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C11:no:A1:C11:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEL_RGR_S2' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spending</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[spending]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>spending</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:/Users/Christos/Desktop/UCL/Νέος φάκελος/Sheet1 (public_spending).tde' schema='Extract' tablename='Extract' update-time='03/12/2017 11:12:13 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='10' timestamp-start='2017-03-12 11:12:13.352' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>45.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>4.5</statistic>
+                <statistic aggregation='Min' datatype='integer'>0</statistic>
+                <statistic aggregation='Max' datatype='integer'>9</statistic>
+                <statistic aggregation='Stdev' datatype='real'>3.0276503540974917</statistic>
+                <statistic aggregation='StdevP' datatype='real'>2.8722813232690143</statistic>
+                <statistic aggregation='Var' datatype='real'>9.1666666666666661</statistic>
+                <statistic aggregation='VarP' datatype='real'>8.25</statistic>
+                <statistic aggregation='Count' datatype='integer'>10</statistic>
+                <statistic aggregation='Median' datatype='integer'>5</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>285.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>1</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>10.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>10</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>10.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='date'>#2003-01-01#</statistic>
+                <statistic aggregation='Max' datatype='date'>#2012-01-01#</statistic>
+                <statistic aggregation='Count' datatype='integer'>10</statistic>
+                <statistic aggregation='Median' datatype='date'>#2008-01-01#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;date&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>spending</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[spending]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>spending</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>996792.09999999986</statistic>
+                <statistic aggregation='Avg' datatype='real'>99679.209999999992</statistic>
+                <statistic aggregation='Min' datatype='real'>70799.399999999994</statistic>
+                <statistic aggregation='Max' datatype='real'>121332.0</statistic>
+                <statistic aggregation='Stdev' datatype='real'>18202.365998679717</statistic>
+                <statistic aggregation='StdevP' datatype='real'>17268.280607950008</statistic>
+                <statistic aggregation='Var' datatype='real'>331326127.94989151</statistic>
+                <statistic aggregation='VarP' datatype='real'>298193515.15490234</statistic>
+                <statistic aggregation='Count' datatype='integer'>10</statistic>
+                <statistic aggregation='Median' datatype='real'>104586.7</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>102341384213.78999</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.455531' measure-ordering='alphabetic' measure-percentage='0.544469' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Greece&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+    <datasource caption='GSK-RES+ (Multiple Connections)' inline='true' name='federated.1qot3pe13ljsfh196v1ww0uzyf1j' version='10.2'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='GSK-RES' name='excel-direct.10erqon1e66b4n18atqpz1dth3pz'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Christos/Desktop/UCL/Νέος φάκελος/GSK-RES.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='AZ-RES' name='excel-direct.1dmznst0xo02qj0zsj5b01k5dwm5'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Christos/Desktop/UCL/Νέος φάκελος/AZ-RES.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='HIKMA-RES' name='excel-direct.06hvjs719rrbnl10qlfvg0d2nlr6'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Christos/Desktop/UCL/Νέος φάκελος/HIKMA-RES.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='SHIRE-RES' name='excel-direct.0im1mvq00evm3d16qi5mz1iqaepv'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Christos/Desktop/UCL/Νέος φάκελος/SHIRE-RES.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='SMITH-RES' name='excel-direct.1xd9drm0z47imi19ut5zm0b4062x'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Christos/Desktop/UCL/Νέος φάκελος/SMITH-RES.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[GSK-RES].[Algorithm]' />
+              <expression op='[SMITH-RES].[Algorithm]' />
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[GSK-RES].[Algorithm]' />
+                <expression op='[SHIRE-RES].[Algorithm]' />
+              </expression>
+            </clause>
+            <relation join='inner' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[GSK-RES].[Algorithm]' />
+                  <expression op='[HIKMA-RES].[Algorithm]' />
+                </expression>
+              </clause>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[GSK-RES].[Algorithm]' />
+                    <expression op='[AZ-RES].[Algorithm]' />
+                  </expression>
+                </clause>
+                <relation connection='excel-direct.10erqon1e66b4n18atqpz1dth3pz' name='GSK-RES' table='[&apos;GSK-RES$&apos;]' type='table'>
+                  <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+                    <column datatype='string' name='Algorithm' ordinal='0' />
+                    <column datatype='real' name='Mean Absolute Error' ordinal='1' />
+                    <column datatype='real' name='Root Mean Squared Error' ordinal='2' />
+                    <column datatype='real' name='Relative Absolute Error' ordinal='3' />
+                    <column datatype='real' name='Relative Squared Error' ordinal='4' />
+                    <column datatype='real' name='Coefficient of Determination' ordinal='5' />
+                  </columns>
+                </relation>
+                <relation connection='excel-direct.1dmznst0xo02qj0zsj5b01k5dwm5' name='AZ-RES' table='[&apos;AZ-RES$&apos;]' type='table'>
+                  <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+                    <column datatype='string' name='Algorithm' ordinal='0' />
+                    <column datatype='real' name='Mean Absolute Error' ordinal='1' />
+                    <column datatype='real' name='Root Mean Squared Error' ordinal='2' />
+                    <column datatype='real' name='Relative Absolute Error' ordinal='3' />
+                    <column datatype='real' name='Relative Squared Error' ordinal='4' />
+                    <column datatype='real' name='Coefficient of Determination' ordinal='5' />
+                  </columns>
+                </relation>
+              </relation>
+              <relation connection='excel-direct.06hvjs719rrbnl10qlfvg0d2nlr6' name='HIKMA-RES' table='[&apos;HIKMA-RES$&apos;]' type='table'>
+                <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Algorithm' ordinal='0' />
+                  <column datatype='real' name='Mean Absolute Error' ordinal='1' />
+                  <column datatype='real' name='Root Mean Squared Error' ordinal='2' />
+                  <column datatype='real' name='Relative Absolute Error' ordinal='3' />
+                  <column datatype='real' name='Relative Squared Error' ordinal='4' />
+                  <column datatype='real' name='Coefficient of Determination' ordinal='5' />
+                </columns>
+              </relation>
+            </relation>
+            <relation connection='excel-direct.0im1mvq00evm3d16qi5mz1iqaepv' name='SHIRE-RES' table='[&apos;SHIRE-RES$&apos;]' type='table'>
+              <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+                <column datatype='string' name='Algorithm' ordinal='0' />
+                <column datatype='real' name='Mean Absolute Error' ordinal='1' />
+                <column datatype='real' name='Root Mean Squared Error' ordinal='2' />
+                <column datatype='real' name='Relative Absolute Error' ordinal='3' />
+                <column datatype='real' name='Relative Squared Error' ordinal='4' />
+                <column datatype='real' name='Coefficient of Determination' ordinal='5' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='excel-direct.1xd9drm0z47imi19ut5zm0b4062x' name='SMITH-RES' table='[&apos;SMITH-RES$&apos;]' type='table'>
+            <columns gridOrigin='A1:F4:no:A1:F4:0' header='yes' outcome='6'>
+              <column datatype='string' name='Algorithm' ordinal='0' />
+              <column datatype='real' name='Mean Absolute Error' ordinal='1' />
+              <column datatype='real' name='Root Mean Squared Error' ordinal='2' />
+              <column datatype='real' name='Relative Absolute Error' ordinal='3' />
+              <column datatype='real' name='Relative Squared Error' ordinal='4' />
+              <column datatype='real' name='Coefficient of Determination' ordinal='5' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Algorithm (AZ-RES)]' value='[AZ-RES].[Algorithm]' />
+          <map key='[Algorithm (HIKMA-RES)]' value='[HIKMA-RES].[Algorithm]' />
+          <map key='[Algorithm (SHIRE-RES)]' value='[SHIRE-RES].[Algorithm]' />
+          <map key='[Algorithm (SMITH-RES)]' value='[SMITH-RES].[Algorithm]' />
+          <map key='[Algorithm]' value='[GSK-RES].[Algorithm]' />
+          <map key='[Coefficient of Determination (AZ-RES)]' value='[AZ-RES].[Coefficient of Determination]' />
+          <map key='[Coefficient of Determination (HIKMA-RES)]' value='[HIKMA-RES].[Coefficient of Determination]' />
+          <map key='[Coefficient of Determination (SHIRE-RES)]' value='[SHIRE-RES].[Coefficient of Determination]' />
+          <map key='[Coefficient of Determination (SMITH-RES)]' value='[SMITH-RES].[Coefficient of Determination]' />
+          <map key='[Coefficient of Determination]' value='[GSK-RES].[Coefficient of Determination]' />
+          <map key='[Mean Absolute Error (AZ-RES)]' value='[AZ-RES].[Mean Absolute Error]' />
+          <map key='[Mean Absolute Error (HIKMA-RES)]' value='[HIKMA-RES].[Mean Absolute Error]' />
+          <map key='[Mean Absolute Error (SHIRE-RES)]' value='[SHIRE-RES].[Mean Absolute Error]' />
+          <map key='[Mean Absolute Error (SMITH-RES)]' value='[SMITH-RES].[Mean Absolute Error]' />
+          <map key='[Mean Absolute Error]' value='[GSK-RES].[Mean Absolute Error]' />
+          <map key='[Relative Absolute Error (AZ-RES)]' value='[AZ-RES].[Relative Absolute Error]' />
+          <map key='[Relative Absolute Error (HIKMA-RES)]' value='[HIKMA-RES].[Relative Absolute Error]' />
+          <map key='[Relative Absolute Error (SHIRE-RES)]' value='[SHIRE-RES].[Relative Absolute Error]' />
+          <map key='[Relative Absolute Error (SMITH-RES)]' value='[SMITH-RES].[Relative Absolute Error]' />
+          <map key='[Relative Absolute Error]' value='[GSK-RES].[Relative Absolute Error]' />
+          <map key='[Relative Squared Error (AZ-RES)]' value='[AZ-RES].[Relative Squared Error]' />
+          <map key='[Relative Squared Error (HIKMA-RES)]' value='[HIKMA-RES].[Relative Squared Error]' />
+          <map key='[Relative Squared Error (SHIRE-RES)]' value='[SHIRE-RES].[Relative Squared Error]' />
+          <map key='[Relative Squared Error (SMITH-RES)]' value='[SMITH-RES].[Relative Squared Error]' />
+          <map key='[Relative Squared Error]' value='[GSK-RES].[Relative Squared Error]' />
+          <map key='[Root Mean Squared Error (AZ-RES)]' value='[AZ-RES].[Root Mean Squared Error]' />
+          <map key='[Root Mean Squared Error (HIKMA-RES)]' value='[HIKMA-RES].[Root Mean Squared Error]' />
+          <map key='[Root Mean Squared Error (SHIRE-RES)]' value='[SHIRE-RES].[Root Mean Squared Error]' />
+          <map key='[Root Mean Squared Error (SMITH-RES)]' value='[SMITH-RES].[Root Mean Squared Error]' />
+          <map key='[Root Mean Squared Error]' value='[GSK-RES].[Root Mean Squared Error]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Algorithm</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Algorithm]</local-name>
+            <parent-name>[GSK-RES]</parent-name>
+            <remote-alias>Algorithm</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEL_RGR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mean Absolute Error]</local-name>
+            <parent-name>[GSK-RES]</parent-name>
+            <remote-alias>Mean Absolute Error</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Root Mean Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Root Mean Squared Error]</local-name>
+            <parent-name>[GSK-RES]</parent-name>
+            <remote-alias>Root Mean Squared Error</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Absolute Error]</local-name>
+            <parent-name>[GSK-RES]</parent-name>
+            <remote-alias>Relative Absolute Error</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Squared Error]</local-name>
+            <parent-name>[GSK-RES]</parent-name>
+            <remote-alias>Relative Squared Error</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coefficient of Determination</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Coefficient of Determination]</local-name>
+            <parent-name>[GSK-RES]</parent-name>
+            <remote-alias>Coefficient of Determination</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[GSK-RES]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F4:no:A1:F4:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Algorithm</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Algorithm (AZ-RES)]</local-name>
+            <parent-name>[AZ-RES]</parent-name>
+            <remote-alias>Algorithm</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEL_RGR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mean Absolute Error (AZ-RES)]</local-name>
+            <parent-name>[AZ-RES]</parent-name>
+            <remote-alias>Mean Absolute Error</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Root Mean Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Root Mean Squared Error (AZ-RES)]</local-name>
+            <parent-name>[AZ-RES]</parent-name>
+            <remote-alias>Root Mean Squared Error</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Absolute Error (AZ-RES)]</local-name>
+            <parent-name>[AZ-RES]</parent-name>
+            <remote-alias>Relative Absolute Error</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Squared Error (AZ-RES)]</local-name>
+            <parent-name>[AZ-RES]</parent-name>
+            <remote-alias>Relative Squared Error</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coefficient of Determination</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Coefficient of Determination (AZ-RES)]</local-name>
+            <parent-name>[AZ-RES]</parent-name>
+            <remote-alias>Coefficient of Determination</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AZ-RES]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F4:no:A1:F4:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Algorithm</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Algorithm (HIKMA-RES)]</local-name>
+            <parent-name>[HIKMA-RES]</parent-name>
+            <remote-alias>Algorithm</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEL_RGR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mean Absolute Error (HIKMA-RES)]</local-name>
+            <parent-name>[HIKMA-RES]</parent-name>
+            <remote-alias>Mean Absolute Error</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Root Mean Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Root Mean Squared Error (HIKMA-RES)]</local-name>
+            <parent-name>[HIKMA-RES]</parent-name>
+            <remote-alias>Root Mean Squared Error</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Absolute Error (HIKMA-RES)]</local-name>
+            <parent-name>[HIKMA-RES]</parent-name>
+            <remote-alias>Relative Absolute Error</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Squared Error (HIKMA-RES)]</local-name>
+            <parent-name>[HIKMA-RES]</parent-name>
+            <remote-alias>Relative Squared Error</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coefficient of Determination</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Coefficient of Determination (HIKMA-RES)]</local-name>
+            <parent-name>[HIKMA-RES]</parent-name>
+            <remote-alias>Coefficient of Determination</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[HIKMA-RES]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F4:no:A1:F4:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Algorithm</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Algorithm (SHIRE-RES)]</local-name>
+            <parent-name>[SHIRE-RES]</parent-name>
+            <remote-alias>Algorithm</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEL_RGR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mean Absolute Error (SHIRE-RES)]</local-name>
+            <parent-name>[SHIRE-RES]</parent-name>
+            <remote-alias>Mean Absolute Error</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Root Mean Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Root Mean Squared Error (SHIRE-RES)]</local-name>
+            <parent-name>[SHIRE-RES]</parent-name>
+            <remote-alias>Root Mean Squared Error</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Absolute Error (SHIRE-RES)]</local-name>
+            <parent-name>[SHIRE-RES]</parent-name>
+            <remote-alias>Relative Absolute Error</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Squared Error (SHIRE-RES)]</local-name>
+            <parent-name>[SHIRE-RES]</parent-name>
+            <remote-alias>Relative Squared Error</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coefficient of Determination</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Coefficient of Determination (SHIRE-RES)]</local-name>
+            <parent-name>[SHIRE-RES]</parent-name>
+            <remote-alias>Coefficient of Determination</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[SHIRE-RES]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F4:no:A1:F4:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Algorithm</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Algorithm (SMITH-RES)]</local-name>
+            <parent-name>[SMITH-RES]</parent-name>
+            <remote-alias>Algorithm</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEL_RGR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mean Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mean Absolute Error (SMITH-RES)]</local-name>
+            <parent-name>[SMITH-RES]</parent-name>
+            <remote-alias>Mean Absolute Error</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Root Mean Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Root Mean Squared Error (SMITH-RES)]</local-name>
+            <parent-name>[SMITH-RES]</parent-name>
+            <remote-alias>Root Mean Squared Error</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Absolute Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Absolute Error (SMITH-RES)]</local-name>
+            <parent-name>[SMITH-RES]</parent-name>
+            <remote-alias>Relative Absolute Error</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Relative Squared Error</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Relative Squared Error (SMITH-RES)]</local-name>
+            <parent-name>[SMITH-RES]</parent-name>
+            <remote-alias>Relative Squared Error</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coefficient of Determination</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Coefficient of Determination (SMITH-RES)]</local-name>
+            <parent-name>[SMITH-RES]</parent-name>
+            <remote-alias>Coefficient of Determination</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[SMITH-RES]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F4:no:A1:F4:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[attr:Relative Absolute Error:qk]&quot;' value='GlaxoSmithKline_PLC' />
+          <alias key='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (AZ-RES):qk]&quot;' value='AstraZeneca_PLC' />
+          <alias key='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (HIKMA-RES):qk]&quot;' value='Hikma_Pharmaceuticals_PLC' />
+          <alias key='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (SHIRE-RES):qk]&quot;' value='Shire_PLC' />
+          <alias key='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (SMITH-RES):qk]&quot;' value='Smith_Nephew_PLC' />
+          <alias key='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error:qk]&quot;' value='GlaxoSmithKline PLC' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='real' name='[Relative Absolute Error (AZ-RES)]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Relative Absolute Error (HIKMA-RES)]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Relative Absolute Error (SHIRE-RES)]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Relative Absolute Error (SMITH-RES)]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Relative Absolute Error]' role='measure' type='quantitative' />
+      <column-instance column='[Relative Absolute Error]' derivation='Attribute' name='[attr:Relative Absolute Error:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Relative Absolute Error (AZ-RES)]' derivation='Sum' name='[sum:Relative Absolute Error (AZ-RES):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Relative Absolute Error (HIKMA-RES)]' derivation='Sum' name='[sum:Relative Absolute Error (HIKMA-RES):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Relative Absolute Error (SHIRE-RES)]' derivation='Sum' name='[sum:Relative Absolute Error (SHIRE-RES):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Relative Absolute Error (SMITH-RES)]' derivation='Sum' name='[sum:Relative Absolute Error (SMITH-RES):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Relative Absolute Error]' derivation='Sum' name='[sum:Relative Absolute Error:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:/Users/Christos/Desktop/UCL/Νέος φάκελος/GSK-RES+ (Multiple Connections).tde' schema='Extract' tablename='Extract' update-time='03/12/2017 11:14:43 AM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[Algorithm (AZ-RES)]' value='[Extract].[Algorithm]' />
+            <map key='[Algorithm (HIKMA-RES)]' value='[Extract].[Algorithm1]' />
+            <map key='[Algorithm (SHIRE-RES)]' value='[Extract].[Algorithm2]' />
+            <map key='[Algorithm (SMITH-RES)]' value='[Extract].[Algorithm3]' />
+            <map key='[Algorithm]' value='[Extract].[Algorithm4]' />
+            <map key='[Coefficient of Determination (AZ-RES)]' value='[Extract].[Coefficient of Determination]' />
+            <map key='[Coefficient of Determination (HIKMA-RES)]' value='[Extract].[Coefficient of Determination1]' />
+            <map key='[Coefficient of Determination (SHIRE-RES)]' value='[Extract].[Coefficient of Determination2]' />
+            <map key='[Coefficient of Determination (SMITH-RES)]' value='[Extract].[Coefficient of Determination3]' />
+            <map key='[Coefficient of Determination]' value='[Extract].[Coefficient of Determination4]' />
+            <map key='[Mean Absolute Error (AZ-RES)]' value='[Extract].[Mean Absolute Error]' />
+            <map key='[Mean Absolute Error (HIKMA-RES)]' value='[Extract].[Mean Absolute Error1]' />
+            <map key='[Mean Absolute Error (SHIRE-RES)]' value='[Extract].[Mean Absolute Error2]' />
+            <map key='[Mean Absolute Error (SMITH-RES)]' value='[Extract].[Mean Absolute Error3]' />
+            <map key='[Mean Absolute Error]' value='[Extract].[Mean Absolute Error4]' />
+            <map key='[Number of Records]' value='[Extract].[Number of Records]' />
+            <map key='[Relative Absolute Error (AZ-RES)]' value='[Extract].[Relative Absolute Error]' />
+            <map key='[Relative Absolute Error (HIKMA-RES)]' value='[Extract].[Relative Absolute Error1]' />
+            <map key='[Relative Absolute Error (SHIRE-RES)]' value='[Extract].[Relative Absolute Error2]' />
+            <map key='[Relative Absolute Error (SMITH-RES)]' value='[Extract].[Relative Absolute Error3]' />
+            <map key='[Relative Absolute Error]' value='[Extract].[Relative Absolute Error4]' />
+            <map key='[Relative Squared Error (AZ-RES)]' value='[Extract].[Relative Squared Error]' />
+            <map key='[Relative Squared Error (HIKMA-RES)]' value='[Extract].[Relative Squared Error1]' />
+            <map key='[Relative Squared Error (SHIRE-RES)]' value='[Extract].[Relative Squared Error2]' />
+            <map key='[Relative Squared Error (SMITH-RES)]' value='[Extract].[Relative Squared Error3]' />
+            <map key='[Relative Squared Error]' value='[Extract].[Relative Squared Error4]' />
+            <map key='[Root Mean Squared Error (AZ-RES)]' value='[Extract].[Root Mean Squared Error]' />
+            <map key='[Root Mean Squared Error (HIKMA-RES)]' value='[Extract].[Root Mean Squared Error1]' />
+            <map key='[Root Mean Squared Error (SHIRE-RES)]' value='[Extract].[Root Mean Squared Error2]' />
+            <map key='[Root Mean Squared Error (SMITH-RES)]' value='[Extract].[Root Mean Squared Error3]' />
+            <map key='[Root Mean Squared Error]' value='[Extract].[Root Mean Squared Error4]' />
+          </cols>
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='3' timestamp-start='2017-03-12 11:14:43.147' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Algorithm</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Algorithm (AZ-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Algorithm</remote-alias>
+              <ordinal>0</ordinal>
+              <family>AZ-RES</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEL_RGR' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Bayesian Linear Regression&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Neural Network Regression&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;Linear Regression&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;el&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Algorithm1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Algorithm (HIKMA-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Algorithm1</remote-alias>
+              <ordinal>1</ordinal>
+              <family>HIKMA-RES</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEL_RGR' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Bayesian Linear Regression&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Neural Network Regression&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='Median' datatype='string'>&quot;Linear Regression&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;el&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Algorithm2</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Algorithm (SHIRE-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Algorithm2</remote-alias>
+              <ordinal>2</ordinal>
+              <family>SHIRE-RES</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEL_RGR' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Bayesian Linear Regression&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Neural Network Regression&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;el&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Algorithm3</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Algorithm (SMITH-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Algorithm3</remote-alias>
+              <ordinal>3</ordinal>
+              <family>SMITH-RES</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEL_RGR' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Bayesian Linear Regression&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Neural Network Regression&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;el&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Algorithm4</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Algorithm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Algorithm4</remote-alias>
+              <ordinal>4</ordinal>
+              <family>GSK-RES</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEL_RGR' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;Bayesian Linear Regression&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;Neural Network Regression&quot;</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;el&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Coefficient of Determination</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Coefficient of Determination (AZ-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Coefficient of Determination</remote-alias>
+              <ordinal>5</ordinal>
+              <family>AZ-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>2.6270970478880988</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.87569901596269961</statistic>
+                <statistic aggregation='Min' datatype='real'>0.71775974573461998</statistic>
+                <statistic aggregation='Max' datatype='real'>0.95481298506051804</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.13677949642557111</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.11167999117249491</statistic>
+                <statistic aggregation='Var' datatype='real'>0.018708630642432816</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.012472420428288543</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>2.3379635609589871</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Coefficient of Determination1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Coefficient of Determination (HIKMA-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Coefficient of Determination1</remote-alias>
+              <ordinal>6</ordinal>
+              <family>HIKMA-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>0.39771783150900697</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.13257261050300231</statistic>
+                <statistic aggregation='Min' datatype='real'>-1.55180134898776</statistic>
+                <statistic aggregation='Max' datatype='real'>0.97482693401023901</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1.4587106399464986</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1.1910322500792114</statistic>
+                <statistic aggregation='Var' datatype='real'>2.1278367310931237</statistic>
+                <statistic aggregation='VarP' datatype='real'>1.418557820728749</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>4.3083999533529891</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Coefficient of Determination2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Coefficient of Determination (SHIRE-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Coefficient of Determination2</remote-alias>
+              <ordinal>7</ordinal>
+              <family>SHIRE-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1.513440467242479</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.50448015574749305</statistic>
+                <statistic aggregation='Min' datatype='real'>-0.44145384880365302</statistic>
+                <statistic aggregation='Max' datatype='real'>0.97754493548839205</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.81920288408004172</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.66887635393748635</statistic>
+                <statistic aggregation='Var' datatype='real'>0.67109336528505825</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.4473955768567055</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>2.1056874131991612</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Coefficient of Determination3</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Coefficient of Determination (SMITH-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Coefficient of Determination3</remote-alias>
+              <ordinal>8</ordinal>
+              <family>SMITH-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1.9568025293270379</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.65226750977567927</statistic>
+                <statistic aggregation='Min' datatype='real'>0.018722905811498901</statistic>
+                <statistic aggregation='Max' datatype='real'>0.96914846289904599</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.54866573222151227</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.44798369443107205</statistic>
+                <statistic aggregation='Var' datatype='real'>0.30103408571416818</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.20068939047611212</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1.8784268843552339</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Coefficient of Determination4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Coefficient of Determination]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Coefficient of Determination4</remote-alias>
+              <ordinal>9</ordinal>
+              <family>GSK-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>2.895162579359019</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.965054193119673</statistic>
+                <statistic aggregation='Min' datatype='real'>0.94064948196374798</statistic>
+                <statistic aggregation='Max' datatype='real'>0.97747726112453903</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.021136252244160242</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.017257677690982812</statistic>
+                <statistic aggregation='Var' datatype='real'>0.00044674115892876881</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.00029782743928584584</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>2.7948822692914463</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean Absolute Error</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Mean Absolute Error (AZ-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean Absolute Error</remote-alias>
+              <ordinal>10</ordinal>
+              <family>AZ-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>221.97876052223179</statistic>
+                <statistic aggregation='Avg' datatype='real'>73.99292017407727</statistic>
+                <statistic aggregation='Min' datatype='real'>47.706871553244902</statistic>
+                <statistic aggregation='Max' datatype='real'>126.404234649743</statistic>
+                <statistic aggregation='Stdev' datatype='real'>45.389600973954444</statistic>
+                <statistic aggregation='StdevP' datatype='real'>37.060454004907584</statistic>
+                <statistic aggregation='Var' datatype='real'>2060.2158765748063</statistic>
+                <statistic aggregation='VarP' datatype='real'>1373.4772510498708</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>20545.288460811724</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean Absolute Error1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Mean Absolute Error (HIKMA-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean Absolute Error1</remote-alias>
+              <ordinal>11</ordinal>
+              <family>HIKMA-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>439.65051372362882</statistic>
+                <statistic aggregation='Avg' datatype='real'>146.5501712412096</statistic>
+                <statistic aggregation='Min' datatype='real'>28.9002428351764</statistic>
+                <statistic aggregation='Max' datatype='real'>381.83587048421799</statistic>
+                <statistic aggregation='Stdev' datatype='real'>203.76339281458957</statistic>
+                <statistic aggregation='StdevP' datatype='real'>166.37211355134556</statistic>
+                <statistic aggregation='Var' datatype='real'>41519.52025131273</statistic>
+                <statistic aggregation='VarP' datatype='real'>27679.680167541821</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>147469.89857510905</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean Absolute Error2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Mean Absolute Error (SHIRE-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean Absolute Error2</remote-alias>
+              <ordinal>12</ordinal>
+              <family>SHIRE-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>786.48244828751217</statistic>
+                <statistic aggregation='Avg' datatype='real'>262.16081609583739</statistic>
+                <statistic aggregation='Min' datatype='real'>63.836002886748602</statistic>
+                <statistic aggregation='Max' datatype='real'>658.48970188450198</statistic>
+                <statistic aggregation='Stdev' datatype='real'>343.23092081206948</statistic>
+                <statistic aggregation='StdevP' datatype='real'>280.24687331172981</statistic>
+                <statistic aggregation='Var' datatype='real'>117807.4650015011</statistic>
+                <statistic aggregation='VarP' datatype='real'>78538.310001000733</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>441799.81049110868</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean Absolute Error3</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Mean Absolute Error (SMITH-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean Absolute Error3</remote-alias>
+              <ordinal>13</ordinal>
+              <family>SMITH-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>102.7339421379175</statistic>
+                <statistic aggregation='Avg' datatype='real'>34.244647379305832</statistic>
+                <statistic aggregation='Min' datatype='real'>11.725620121500301</statistic>
+                <statistic aggregation='Max' datatype='real'>79.240282834231195</statistic>
+                <statistic aggregation='Stdev' datatype='real'>38.967369135452032</statistic>
+                <statistic aggregation='StdevP' datatype='real'>31.816723666845185</statistic>
+                <statistic aggregation='Var' datatype='real'>1518.4558573385796</statistic>
+                <statistic aggregation='VarP' datatype='real'>1012.3039048923864</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>6554.9993370761522</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mean Absolute Error4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Mean Absolute Error]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mean Absolute Error4</remote-alias>
+              <ordinal>14</ordinal>
+              <family>GSK-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>49.043440482266902</statistic>
+                <statistic aggregation='Avg' datatype='real'>16.347813494088967</statistic>
+                <statistic aggregation='Min' datatype='real'>13.0181191127472</statistic>
+                <statistic aggregation='Max' datatype='real'>22.844155141469599</statistic>
+                <statistic aggregation='Stdev' datatype='real'>5.626587526207266</statistic>
+                <statistic aggregation='StdevP' datatype='real'>4.5940894774388248</statistic>
+                <statistic aggregation='Var' datatype='real'>31.658487190071202</statistic>
+                <statistic aggregation='VarP' datatype='real'>21.105658126714136</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>865.06999249269438</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>15</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>3.0</statistic>
+                <statistic aggregation='Avg' datatype='real'>1.0</statistic>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.0</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='Median' datatype='integer'>1</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>3.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Absolute Error</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Absolute Error (AZ-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Absolute Error</remote-alias>
+              <ordinal>16</ordinal>
+              <family>AZ-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>0.92182425738223706</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.3072747524607457</statistic>
+                <statistic aggregation='Min' datatype='real'>0.19811513199793401</statistic>
+                <statistic aggregation='Max' datatype='real'>0.52492630133548002</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.18849206614297279</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.15390312753774008</statistic>
+                <statistic aggregation='Var' datatype='real'>0.035529258998846826</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.023686172665897884</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>0.35431183849713127</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Absolute Error1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Absolute Error (HIKMA-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Absolute Error1</remote-alias>
+              <ordinal>17</ordinal>
+              <family>HIKMA-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1.9293740731206781</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.64312469104022607</statistic>
+                <statistic aggregation='Min' datatype='real'>0.12682659861085099</statistic>
+                <statistic aggregation='Max' datatype='real'>1.67565874644427</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.89420072279206886</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.73011183282282555</statistic>
+                <statistic aggregation='Var' datatype='real'>0.79959493264185844</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.53306328842790562</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>2.8400179699604751</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Absolute Error2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Absolute Error (SHIRE-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Absolute Error2</remote-alias>
+              <ordinal>18</ordinal>
+              <family>SHIRE-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1.5881652974020519</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.52938843246735068</statistic>
+                <statistic aggregation='Min' datatype='real'>0.12890576862883699</statistic>
+                <statistic aggregation='Max' datatype='real'>1.3297060799089599</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.6930954894365392</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.56591009738136311</statistic>
+                <statistic aggregation='Var' datatype='real'>0.48038135747727589</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.32025423831818389</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1.8015190522452678</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Absolute Error3</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Absolute Error (SMITH-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Absolute Error3</remote-alias>
+              <ordinal>19</ordinal>
+              <family>SMITH-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1.4889276788884842</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.49630922629616142</statistic>
+                <statistic aggregation='Min' datatype='real'>0.16993994377822799</statistic>
+                <statistic aggregation='Max' datatype='real'>1.14843300996325</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.56475584672249546</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.46112121790786043</statistic>
+                <statistic aggregation='Var' datatype='real'>0.31894916640724275</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.21263277760482849</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1.3768668771345685</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Absolute Error4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Absolute Error]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Absolute Error4</remote-alias>
+              <ordinal>20</ordinal>
+              <family>GSK-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>0.48836066455662797</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.16278688818554266</statistic>
+                <statistic aggregation='Min' datatype='real'>0.12963073631584501</statistic>
+                <statistic aggregation='Max' datatype='real'>0.22747561501433899</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.056027962077378361</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.045746639472527731</statistic>
+                <statistic aggregation='Var' datatype='real'>0.0031391325345441479</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0020927550230294321</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>0.085776977964485385</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Squared Error</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Squared Error (AZ-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Squared Error</remote-alias>
+              <ordinal>21</ordinal>
+              <family>AZ-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>0.37290295211190094</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.12430098403730032</statistic>
+                <statistic aggregation='Min' datatype='real'>0.045187014939482101</statistic>
+                <statistic aggregation='Max' datatype='real'>0.28224025426538002</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.13677949642557055</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.1116799911724945</statistic>
+                <statistic aggregation='Var' datatype='real'>0.01870863064243267</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.012472420428288448</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>0.083769465182788896</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Squared Error1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Squared Error (HIKMA-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Squared Error1</remote-alias>
+              <ordinal>22</ordinal>
+              <family>HIKMA-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>2.6022821684909929</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.8674273894969976</statistic>
+                <statistic aggregation='Min' datatype='real'>0.025173065989760799</statistic>
+                <statistic aggregation='Max' datatype='real'>2.5518013489877598</statistic>
+                <statistic aggregation='Stdev' datatype='real'>1.4587106399464982</statistic>
+                <statistic aggregation='StdevP' datatype='real'>1.191032250079211</statistic>
+                <statistic aggregation='Var' datatype='real'>2.1278367310931223</statistic>
+                <statistic aggregation='VarP' datatype='real'>1.4185578207287481</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>6.5129642903349731</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Squared Error2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Squared Error (SHIRE-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Squared Error2</remote-alias>
+              <ordinal>23</ordinal>
+              <family>SHIRE-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1.486559532757517</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.49551984425250567</statistic>
+                <statistic aggregation='Min' datatype='real'>0.0224550645116076</statistic>
+                <statistic aggregation='Max' datatype='real'>1.4414538488036499</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.81920288408004038</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.66887635393748524</statistic>
+                <statistic aggregation='Var' datatype='real'>0.67109336528505603</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.44739557685670406</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>2.0788064787141942</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Squared Error3</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Squared Error (SMITH-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Squared Error3</remote-alias>
+              <ordinal>24</ordinal>
+              <family>SMITH-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>1.0431974706729621</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.34773249022432068</statistic>
+                <statistic aggregation='Min' datatype='real'>0.030851537100954399</statistic>
+                <statistic aggregation='Max' datatype='real'>0.98127709418850095</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.54866573222151216</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.44798369443107194</statistic>
+                <statistic aggregation='Var' datatype='real'>0.30103408571416806</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.20068939047611203</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>0.96482182570115793</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Relative Squared Error4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Relative Squared Error]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Relative Squared Error4</remote-alias>
+              <ordinal>25</ordinal>
+              <family>GSK-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>0.10483742064098009</statistic>
+                <statistic aggregation='Avg' datatype='real'>0.034945806880326696</statistic>
+                <statistic aggregation='Min' datatype='real'>0.022522738875460802</statistic>
+                <statistic aggregation='Max' datatype='real'>0.0593505180362515</statistic>
+                <statistic aggregation='Stdev' datatype='real'>0.021136252244153414</statistic>
+                <statistic aggregation='StdevP' datatype='real'>0.01725767769097724</statistic>
+                <statistic aggregation='Var' datatype='real'>0.00044674115892848025</statistic>
+                <statistic aggregation='VarP' datatype='real'>0.0002978274392856535</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>0.0045571105734082268</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Root Mean Squared Error</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Root Mean Squared Error (AZ-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Root Mean Squared Error</remote-alias>
+              <ordinal>26</ordinal>
+              <family>AZ-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>293.02419222777382</statistic>
+                <statistic aggregation='Avg' datatype='real'>97.674730742591279</statistic>
+                <statistic aggregation='Min' datatype='real'>65.081798665410403</statistic>
+                <statistic aggregation='Max' datatype='real'>162.65304498736</statistic>
+                <statistic aggregation='Stdev' datatype='real'>56.272966518659551</statistic>
+                <statistic aggregation='StdevP' datatype='real'>45.946684761145924</statistic>
+                <statistic aggregation='Var' datatype='real'>3166.6467608101789</statistic>
+                <statistic aggregation='VarP' datatype='real'>2111.0978405401193</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>34954.352598533471</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Root Mean Squared Error1</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Root Mean Squared Error (HIKMA-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Root Mean Squared Error1</remote-alias>
+              <ordinal>27</ordinal>
+              <family>HIKMA-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>520.40058019208175</statistic>
+                <statistic aggregation='Avg' datatype='real'>173.46686006402726</statistic>
+                <statistic aggregation='Min' datatype='real'>43.111803065827097</statistic>
+                <statistic aggregation='Max' datatype='real'>434.06179389758302</statistic>
+                <statistic aggregation='Stdev' datatype='real'>225.681840145378</statistic>
+                <statistic aggregation='StdevP' datatype='real'>184.26845085617879</statistic>
+                <statistic aggregation='Var' datatype='real'>50932.292971403956</statistic>
+                <statistic aggregation='VarP' datatype='real'>33954.861980935973</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>192136.84056422635</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Root Mean Squared Error2</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Root Mean Squared Error (SHIRE-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Root Mean Squared Error2</remote-alias>
+              <ordinal>28</ordinal>
+              <family>SHIRE-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>947.98959613153602</statistic>
+                <statistic aggregation='Avg' datatype='real'>315.99653204384532</statistic>
+                <statistic aggregation='Min' datatype='real'>94.643867400214404</statistic>
+                <statistic aggregation='Max' datatype='real'>758.29064109157196</statistic>
+                <statistic aggregation='Stdev' datatype='real'>383.03798956404194</statistic>
+                <statistic aggregation='StdevP' datatype='real'>312.74920884447022</statistic>
+                <statistic aggregation='Var' datatype='real'>146718.10144926308</statistic>
+                <statistic aggregation='VarP' datatype='real'>97812.067632842052</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>592997.62768973701</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Root Mean Squared Error3</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Root Mean Squared Error (SMITH-RES)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Root Mean Squared Error3</remote-alias>
+              <ordinal>29</ordinal>
+              <family>SMITH-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>119.9251425771423</statistic>
+                <statistic aggregation='Avg' datatype='real'>39.975047525714096</statistic>
+                <statistic aggregation='Min' datatype='real'>15.690366351949001</statistic>
+                <statistic aggregation='Max' datatype='real'>88.489249417525599</statistic>
+                <statistic aggregation='Stdev' datatype='real'>42.014540335085826</statistic>
+                <statistic aggregation='StdevP' datatype='real'>34.304728532847612</statistic>
+                <statistic aggregation='Var' datatype='real'>1765.221599568554</statistic>
+                <statistic aggregation='VarP' datatype='real'>1176.8143997123693</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>8324.4564731864102</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Root Mean Squared Error4</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Root Mean Squared Error]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Root Mean Squared Error4</remote-alias>
+              <ordinal>30</ordinal>
+              <family>GSK-RES</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Sum' datatype='real'>62.677679436662899</statistic>
+                <statistic aggregation='Avg' datatype='real'>20.892559812220966</statistic>
+                <statistic aggregation='Min' datatype='real'>17.252022473714401</statistic>
+                <statistic aggregation='Max' datatype='real'>28.005392990445099</statistic>
+                <statistic aggregation='Stdev' datatype='real'>6.160468583347642</statistic>
+                <statistic aggregation='StdevP' datatype='real'>5.0300015352160221</statistic>
+                <statistic aggregation='Var' datatype='real'>37.951373166413305</statistic>
+                <statistic aggregation='VarP' datatype='real'>25.300915444275535</statistic>
+                <statistic aggregation='Count' datatype='integer'>3</statistic>
+                <statistic aggregation='SumXSqr' datatype='real'>1385.3999128545183</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (unique)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.32321' measure-ordering='alphabetic' measure-percentage='0.67679' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[attr:Relative Absolute Error:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (SMITH-RES):qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (SHIRE-RES):qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (HIKMA-RES):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (AZ-RES):qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Greece&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Algorthms Benchmarking'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Algorithms Benchmarking</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='GSK-RES+ (Multiple Connections)' name='federated.1qot3pe13ljsfh196v1ww0uzyf1j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qot3pe13ljsfh196v1ww0uzyf1j'>
+            <column datatype='string' name='[Algorithm (AZ-RES)]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Relative Absolute Error (AZ-RES)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Relative Absolute Error (HIKMA-RES)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Relative Absolute Error (SHIRE-RES)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Relative Absolute Error (SMITH-RES)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Relative Absolute Error]' role='measure' type='quantitative' />
+            <column-instance column='[Algorithm (AZ-RES)]' derivation='None' name='[none:Algorithm (AZ-RES):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Relative Absolute Error (AZ-RES)]' derivation='Sum' name='[sum:Relative Absolute Error (AZ-RES):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Relative Absolute Error (HIKMA-RES)]' derivation='Sum' name='[sum:Relative Absolute Error (HIKMA-RES):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Relative Absolute Error (SHIRE-RES)]' derivation='Sum' name='[sum:Relative Absolute Error (SHIRE-RES):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Relative Absolute Error (SMITH-RES)]' derivation='Sum' name='[sum:Relative Absolute Error (SMITH-RES):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Relative Absolute Error]' derivation='Sum' name='[sum:Relative Absolute Error:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (AZ-RES):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (SMITH-RES):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (SHIRE-RES):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (HIKMA-RES):qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (AZ-RES):qk]&quot;</bucket>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (SMITH-RES):qk]&quot;</bucket>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (SHIRE-RES):qk]&quot;</bucket>
+              <bucket>&quot;[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error (HIKMA-RES):qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <sort class='manual' column='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[none:Algorithm (AZ-RES):nk]' direction='ASC'>
+            <dictionary>
+              <bucket>%all%</bucket>
+              <bucket>&quot;Linear Regression&quot;</bucket>
+              <bucket>&quot;Bayesian Linear Regression&quot;</bucket>
+              <bucket>&quot;Neural Network Regression&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[Multiple Values]' scope='rows' value='Relative Absolute Error' />
+            <format attr='subtitle' class='0' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[Multiple Values]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[Multiple Values]' scope='rows' value='true' />
+            <format attr='height' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]' value='217' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[Multiple Values]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]' value='-90' />
+            <format attr='text-format' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[sum:Relative Absolute Error:qk]' value='p0.00%' />
+            <format attr='text-format' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[Multiple Values]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]' value='150' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[Multiple Values]</rows>
+        <cols>([federated.1qot3pe13ljsfh196v1ww0uzyf1j].[none:Algorithm (AZ-RES):nk] / [federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Public spending'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (public_spending)' name='federated.0cwnh6o05hek851buy9ww1rztvho' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0cwnh6o05hek851buy9ww1rztvho'>
+            <column datatype='date' name='[Year]' role='dimension' type='quantitative' />
+            <column datatype='real' name='[spending]' role='measure' type='quantitative' />
+            <column-instance column='[spending]' derivation='Sum' name='[sum:spending:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='Year-Trunc' name='[tyr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0cwnh6o05hek851buy9ww1rztvho].[sum:spending:qk]' scope='rows' value='Health expenditure and financing (million of national currency units)' />
+            <format attr='subtitle' class='0' field='[federated.0cwnh6o05hek851buy9ww1rztvho].[sum:spending:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.0cwnh6o05hek851buy9ww1rztvho].[sum:spending:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.0cwnh6o05hek851buy9ww1rztvho].[sum:spending:qk]</rows>
+        <cols>[federated.0cwnh6o05hek851buy9ww1rztvho].[tyr:Year:ok]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Algorithm Results'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' preset-index='1' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='5' param='horz' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='100000' id='3' type='layout-basic' w='99600' x='0' y='0'>
+              <zone h='90625' id='1' name='Algorthms Benchmarking' w='99600' x='0' y='0' />
+              <zone h='9375' id='6' name='Algorthms Benchmarking' pane-specification-id='0' param='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]' type='color' w='99600' x='0' y='90625' />
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Public Spending'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='1' name='Public spending' w='100000' x='0' y='0' />
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Statistics and Results' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Public Spending</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='347' />
+        </style-rule>
+      </style>
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='7' param='vert' removable='false' type='layout-flow' w='100000' x='0' y='0'>
+            <zone h='4668' id='6' type='title' w='100000' x='0' y='0' />
+            <zone h='94917' id='1' param='vert' removable='false' type='layout-flow' w='100000' x='0' y='4668'>
+              <zone h='11307' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='100000' x='0' y='4668' />
+              <zone h='83610' id='5' paired-zone-id='4' removable='false' type='flipboard' w='100000' x='0' y='15975'>
+                <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                  <story-points>
+                    <story-point caption='We see that the public spending increases over time and that made the topic interesting for us.' captured-sheet='Public Spending' id='1' />
+                    <story-point caption='Algorithm Benchmarking' captured-sheet='Algorithm Results' id='2'>
+                      <capturedDeltas>
+                        <worksheet name='Algorthms Benchmarking'>
+                          <selection-collection>
+                            <node-selection select-tuples='false'>
+                              <oriented-node-reference orientation='vertical'>
+                                <node-reference>
+                                  <axis>[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[Multiple Values]</axis>
+                                </node-reference>
+                                <page-reference />
+                              </oriented-node-reference>
+                            </node-selection>
+                          </selection-collection>
+                        </worksheet>
+                      </capturedDeltas>
+                    </story-point>
+                  </story-points>
+                </flipboard>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Algorthms Benchmarking'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='2147483647'>
+            <card pane-specification-id='0' param='[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='vertical'>
+              <node-reference>
+                <axis>[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[Multiple Values]</axis>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]</field>
+            <field>[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[none:Algorithm (AZ-RES):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' name='Algorithm Results'>
+      <viewpoints>
+        <viewpoint name='Algorthms Benchmarking'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1qot3pe13ljsfh196v1ww0uzyf1j].[:Measure Names]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+    </window>
+    <window class='dashboard' maximized='true' name='Statistics and Results'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+    <window class='dashboard' name='Public Spending'>
+      <viewpoints>
+        <viewpoint name='Public spending'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='1' />
+    </window>
+    <window class='worksheet' name='Public spending'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0cwnh6o05hek851buy9ww1rztvho].[tyr:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Algorithm Results' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7EAAAOxAGVKw4b
+      AAAfEElEQVR4nO2d228c2Z3fP1XV3dX3K5tNUryIN40oaaTxXD22196xPTZgY4MkD8EGCIIA
+      +Te8CJDdlyD5D/KyQJBgH3aRRYCFYc9Y4xl7PJqRNKMrJV6kJsVbs5vse/WluroqDxpzdKFG
+      XUWyW1SfzxPZXb86p391vnVuv3OOZFmWhUDQp8i9zoBA0EuEAAR9jRCAoK8RAhD0NY8J4Opn
+      f6Jpgp5fZWGr+lzjXC6HqWtUGgZUM9xczXeWqlHlo4uf8PmlS2h6+7mXz9++2dl9v2bh9jz6
+      I3kUCJ6Fa+8vQ6NSyfPVzTSvpepUGhFWlu+wW9IYHpuhWdwkW9C48MabPFi8Br4BvG5YuXWD
+      S5sufvn6MNevrVPNxvjObIovFzNI7SYeBUamX6W0uUTNUnn9/BkwqljqAK+f9vPZzQecCGrs
+      Vtu8dWGaTz+7hexx8923X+PG1Sv448OspZeoa1VOzJwnm75NrWng8fuR3T5mRuLcvbdKIjWK
+      22pRKeYpVupMWAbL99ZQPW6quQfcWs3jdnt4/ewUX1y5huIN8uZr53roesGLwF4NsHD1EjVv
+      kvuL177+xOLBVo43zo6y+iDHRrbE26/PcfXKV8wvpTk1Ocba+jojI8OcOnuBiN/DyZk53EaD
+      YnGL6PgZarUGb7z9HVYX7pLNZpHkbyqclaW7XPzsJpNjPv706TW0jXlurmwheweJGi0W71wl
+      OPkap6bGCcUHeePt77By9w61hsHpERUzcpJasYBptrEsuH7jK5bnbzI8PYfHavLP//f/MTw+
+      zvraOtXcGoPT52lpBa5evsK5N97B0Crd9rXgBWSvRGZ1D7/44TvMDsXQDAAJXSvx1fXbtHHR
+      qhX44vIVksNjpFKpvRu4fGHW7nxFqaYjSRIS0tOpSBBPxHmwsEDN/ObjaDTCTq7CidEBwidO
+      cTLhQ5Ie2keHR7h3/TJL6TXkrz97eGvp0dtyb3kJWVFQFBlvKEY04AFF5ac/epcvr33TdJIk
+      GSQYHojxxeeXWM/sHIL7BMcd6dsmwu7eukYhnyM58w4zI+Fu5uvIqBZy3L23SqHS4P33ftDr
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Algorthms Benchmarking' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Public Spending' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Public spending' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Statistics and Results' width='192'>
+      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
+      RU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
